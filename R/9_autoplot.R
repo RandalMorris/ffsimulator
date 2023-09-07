@@ -118,7 +118,7 @@ autoplot.ff_simulation <- function(object,
     ggplot2::aes(x = .data$franchise_name, color = .data$franchise_name, fill = .data$franchise_name)) +
     ggplot2::geom_bar() +
     ggplot2::scale_x_discrete(guide = ggplot2::guide_axis(position = "none"))+
-    ggplot2::facet_wrap(~ .data$rank_label) +
+    ggplot2::facet_wrap(~ .data$rank_label, strip.position = "bottom") +
     ggplot2::xlab(NULL) +
     ggplot2::ylab("Number of Seasons") +
     ggplot2::theme_minimal() +
